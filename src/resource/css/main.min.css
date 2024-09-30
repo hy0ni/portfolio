@@ -54,6 +54,89 @@ img {
   font-weight: 600;
 }
 
+.accordion-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid #c7c7c7;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+}
+.accordion-title.active {
+  padding: 1rem;
+  background-color: #f1ebe6;
+}
+.accordion-title:hover {
+  background-color: #f1ebe6;
+}
+.accordion-title.active:hover {
+  background-color: #f1ebe6;
+}
+.accordion-title:not(.active):hover {
+  background-color: transparent;
+}
+@media (min-width: 416px) {
+  .accordion-title:not(.active):hover {
+    background-color: #f1ebe6;
+  }
+}
+.accordion-content {
+  overflow: hidden;
+  padding: 0 1rem;
+  max-height: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.8;
+  background: #f2f2f2;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  text-align: justify;
+}
+.accordion-content.expanded {
+  max-height: 500px;
+  padding: 1rem;
+}
+.accordion-content p {
+  padding-bottom: 0.2rem;
+}
+
+.btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1rem 0;
+}
+.btn-wrap .btn {
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  padding: 0.1rem;
+  color: #1c1d20;
+  font-weight: 400;
+  border-bottom: 1px solid #1c1d20;
+  letter-spacing: 0.1em;
+}
+.btn-wrap .btn:hover {
+  font-weight: 500;
+}
+
 .global-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,4 +187,36 @@ img {
   font-size: 3.2rem;
   font-weight: 400;
   line-height: 1.4;
+}
+
+.about {
+  height: 100%;
+  padding: 3.2rem 1.4rem 5rem;
+}
+.about header {
+  padding-bottom: 1.2rem;
+}
+.about header h1 {
+  font-family: "GrandSlang", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+.about .intro-img {
+  display: block;
+  -ms-flex-item-align: end;
+      align-self: end;
+  width: 100%;
+  height: 180px;
+  background: url("../img/about_img.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.about .intro p {
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+.about .skill {
+  margin-bottom: 2rem;
 }

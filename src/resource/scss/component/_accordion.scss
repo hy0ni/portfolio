@@ -1,0 +1,56 @@
+.accordion {
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid $border;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+
+    &.active {
+      padding: 1rem;
+      background-color: $active-bg;
+    }
+
+    &:hover {
+      background-color: $active-bg;
+    }
+
+    &.active:hover {
+      background-color: $active-bg;
+    }
+
+    &:not(.active):hover {
+      background-color: transparent;
+      @media (min-width: 416px) {
+        background-color: $active-bg;
+      }
+    }
+  }
+
+  &-content {
+    overflow: hidden;
+    padding: 0 1rem;
+    max-height: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.8;
+    background: #f2f2f2;
+    transition: all 0.6s ease;
+    text-align: justify;
+
+    &.expanded {
+      max-height: 500px;
+      padding: 1rem;
+    }
+
+    p {
+      padding-bottom: 0.2rem;
+    }
+  }
+}

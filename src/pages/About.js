@@ -1,4 +1,30 @@
+import { Link } from "react-router-dom";
+import Accordion from "../components/Accordion";
+
 function About() {
-  return
+  return (
+    <main className="about bg-default">
+      <header>
+        <h1>About</h1>
+      </header>
+      <section className="intro">
+        <span className="intro-img"></span>
+        <p>안녕하세요. 코드에 대한 욕심이 있는 개발자,
+          성장하고 싶은 프론트엔드 신입 개발자 장지현 입니다.
+          저는 문제 해결과 개선에 대한 열정을 가지고 있으며,
+          동료들과의 소통을 중요하게 생각하고,
+          문제 해결을 위한 적극적인 자세와 성실함으로
+          함께 성장해 나가고 싶습니다.
+        </p>
+      </section>
+      <section className="skill">
+        <Accordion />
+      </section>
+      <div className="btn-wrap">
+        <Link className="btn">My CV</Link>
+        <Link className="btn" to="https://github.com/hy0ni" target="_blank" rel="noopener noreferrer">GitHub</Link>
+      </div>
+    </main>
+  )
 }
 export default About;
