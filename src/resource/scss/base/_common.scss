@@ -1,0 +1,16 @@
+.bg-default {
+  background-color: $secondary;
+  color: $primary;
+  a.active {
+    font-weight: 600;
+  }
+}
+
+.bg-black {
+  background-color: $primary;
+  color: $secondary;
+
+  a.active {
+    font-weight: 600;
+  }
+}

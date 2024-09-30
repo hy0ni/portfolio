@@ -1,0 +1,22 @@
+.global-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3em;
+  padding: 0 1.4rem;
+  transition: all 0.3s ease;
+
+  li {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+
+    &:not(:last-child) {
+      margin-right: 0.6rem;
+    }
+  }
+
+  .copyright {
+    margin-left: auto;
+  }
+}
