@@ -1,13 +1,13 @@
 import { NavLink, useLocation } from "react-router-dom";
 
-function Header() {
+function Nav() {
   const location = useLocation();
 
   // 경로에 따른 클래스명 동적 설정
-  const headerClass = location.pathname === '/projects' ? 'bg-black' : 'bg-default';
+  const navClass = location.pathname === '/projects' ? 'bg-black' : 'bg-default';
 
   return (
-    <header className={headerClass}>
+    <nav className={navClass}>
       <ul className="global-nav">
         {location.pathname === '/' ? (
           <li>Portfolio</li>
@@ -20,7 +20,7 @@ function Header() {
         )}
         <li className="copyright">©2024</li>
       </ul>
-    </header>
+    </nav>
   )
 }
-export default Header;
+export default Nav;
