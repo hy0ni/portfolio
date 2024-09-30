@@ -1,0 +1,16 @@
+// adstracts
+@import "../scss/abstracts/variables";
+
+//base
+@import "../scss/base/reset";
+
+// component
+@import "../scss/component/detail";
+
+// layout
+@import "../scss/layout/header";
+
+// page
+@import "../scss/page/home";
+@import "../scss/page/about";
+@import "../scss/page/projects";
