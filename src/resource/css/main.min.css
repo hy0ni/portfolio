@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "GrandSlang";
@@ -56,12 +55,15 @@ img {
 }
 
 .project-detail {
-  padding: 7.5rem 2rem 5rem;
+  padding: 3em 2rem 5rem;
 }
 .project-detail header {
-  padding-bottom: 5.5rem;
+  margin: 2rem 0;
+  padding: 7.5rem 0;
+  border: 1px solid #676767;
 }
 .project-detail header h1 {
+  text-align: center;
   font-family: "GrandSlang", sans-serif;
   font-size: 2.2rem;
 }
@@ -199,16 +201,18 @@ img {
   opacity: 0;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; /* 애니메이션 완료 후 상태 유지 */
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 .fade-in-active {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-animation: fade-in 1s ease forwards;
-          animation: fade-in 1s ease forwards;
 }
 
 @-webkit-keyframes fade-in {
@@ -278,7 +282,7 @@ img {
           box-sizing: border-box;
 }
 .home header {
-  padding-bottom: 2.6rem;
+  padding-bottom: 3rem;
 }
 .home header h1,
 .home header h2,
@@ -338,20 +342,22 @@ img {
           box-sizing: border-box;
 }
 .Projects header {
-  padding-bottom: 2.6rem;
+  padding-bottom: 0.4rem;
 }
 .Projects header h1 {
-  padding-bottom: 0.4rem;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.2em;
 }
-.Projects header p {
+.Projects p {
   font-size: 0.8rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   text-align: justify;
+}
+.Projects .Projects-nav {
+  padding-top: 3rem;
 }
 .Projects .Projects-nav li {
   font-family: "GrandSlang", sans-serif;

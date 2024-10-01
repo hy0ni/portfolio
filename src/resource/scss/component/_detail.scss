@@ -1,8 +1,11 @@
 .project-detail {
-  padding: 7.5rem $width-padding 5rem;
+  padding: $nav-height $width-padding 5rem;
   header {
-    padding-bottom: 5.5rem;
+    margin: 2rem 0;
+    padding: 7.5rem 0;
+    border: 1px solid #676767;
     h1 {
+      text-align: center;
       font-family: $title-font;
       font-size: 2.2rem;
     }

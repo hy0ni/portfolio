@@ -11,21 +11,17 @@ function Projects() {
 
   return (
     <main className="Projects bg-black">
-      <header>
-        <Animation delay={200}>
+      <Animation delayBetween={300} initialDelay={200} duration={1000}>
+        <header>
           <h1>PROJECT</h1>
-        </Animation>
-        <Animation delay={400}>
-          <p>
-            퍼블리셔로 일하며 UI/UX에 대한 이해를 쌓을 수 있었습니다.
-            이 경험을 바탕으로 프론트엔드 개발자로서 성장하기 위해
-            지속적으로 학습하고 있습니다.
-          </p>
-        </Animation>
-      </header>
-      <section>
-        <ul className="Projects-nav">
-          <Animation delay={600}>
+        </header>
+        <p>
+          퍼블리셔로 일하며 UI/UX에 대한 이해를 쌓을 수 있었습니다.
+          이 경험을 바탕으로 프론트엔드 개발자로서 성장하기 위해
+          지속적으로 학습하고 있습니다.
+        </p>
+        <section>
+          <ul className="Projects-nav">
             {projectList.map((project) => (
               <li
                 key={project.id}
@@ -35,9 +31,9 @@ function Projects() {
                 {project.title}
               </li>
             ))}
-          </Animation>
-        </ul>
-      </section>
+          </ul>
+        </section>
+      </Animation>
     </main>
   )
 }
