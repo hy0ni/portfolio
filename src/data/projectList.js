@@ -2,9 +2,9 @@ const projectList = [
   {
     id: 1,
     title: "RPS Game App",
-    description: "해당 웹 애플리케이션은 사용자와 컴퓨터 간의 가위바위보 게임을 제공하며, 백엔드 API를 통해 사용자 인증과 게임 전적 관리를 지원합니다. 사용자들은 회원가입, 로그인, 그리고 자신의 게임 전적을 확인하고 관리할 수 있습니다.",
+    description: "해당 웹 애플리케이션은 사용자와 컴퓨터 간의 가위바위보 게임을 제공하며, 백엔드 API를 통해 사용자 인증과 게임 전적 관리를 지원합니다. 사용자들은 회원가입, 로그인, 자신의 게임 전적을 확인하고 관리할 수 있습니다.",
     role: "Front-end [개인 프로젝트]",
-    link: "hy0ni.github.io/rsp-game-app/",
+    link: "https://hy0ni.github.io/rsp-game-app/",
     stack: ["React", "HTML", "CSS"],
     mainFunction: [
       "사용자 리스트와 전적 이동 버튼 제공",
@@ -27,7 +27,7 @@ const projectList = [
     title: "Product Info App",
     description: "해당 웹 애플리케이션은 API를 사용해 상품 정보를 가져오고, 다양한 상품 정보를 검색, 정렬, 삭제할 수 있는 기능을 제공합니다.",
     role: "Front-end [개인 프로젝트]",
-    link: "hy0ni.github.io/product-app/",
+    link: "https://hy0ni.github.io/product-app",
     stack: ["React", "JavaScript", "HTML", "CSS", "Fetch API"],
     mainFunction: [
       "사용자에게 다양한 상품의 리스트 제공",
@@ -40,7 +40,7 @@ const projectList = [
     keyConcept: [
       "Events: 사용자 상호작용에 대한 반응을 처리하는 이벤트 핸들링",
       "useEffect 훅: 컴포넌트의 생명주기 동안 API 호출 및 비동기 작업 처리",
-      "API: Fetch API를 사용하여 상품 데이터를 비동기적으로 가져옴",
+      "API: Fetch API를 사용하여 상품 데이터 받아와 해당 데이터를 상태 관리에 저장",
     ],
   },
   {
