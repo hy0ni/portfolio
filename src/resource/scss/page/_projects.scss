@@ -1,6 +1,7 @@
 .Projects {
   height: 100vh;
-  padding: 7.5rem $width-padding 0;
+  padding: calc(7.5rem + $nav-height) $width-padding 0;
+  box-sizing: border-box;
 
   header {
     padding-bottom: 2.6rem;

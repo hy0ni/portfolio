@@ -1,10 +1,15 @@
 .global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3em;
+  width: 100%;
+  height: $nav-height;
   padding: 0 $width-padding;
-  transition: all 0.3s ease;
+  transition: font-weight 0.4s ease;
+  box-sizing: border-box;
 
   li {
     text-transform: uppercase;
