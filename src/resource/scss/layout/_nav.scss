@@ -8,8 +8,9 @@
   width: 100%;
   height: $nav-height;
   padding: 0 $width-padding;
-  transition: font-weight 0.4s ease;
   box-sizing: border-box;
+  transition: font-weight 0.4s ease;
+  z-index: 100;
 
   li {
     text-transform: uppercase;
