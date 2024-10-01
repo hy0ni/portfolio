@@ -15,7 +15,7 @@ function Home() {
 
         <ul className="local-nav">
           <li><Link to="/about" >About</Link></li>
-          <li><Link to="/projects" >Projects</Link></li>
+          <li><Link to="/project" >Projects</Link></li>
         </ul>
       </Animation>
     </main>
