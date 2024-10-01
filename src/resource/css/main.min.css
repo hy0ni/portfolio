@@ -54,6 +54,63 @@ img {
   font-weight: 600;
 }
 
+.project-detail {
+  padding: 7.5rem 2rem 5rem;
+}
+.project-detail header {
+  padding-bottom: 5.5rem;
+}
+.project-detail header h1 {
+  font-family: "GrandSlang", sans-serif;
+  font-size: 2.2rem;
+}
+.project-detail .project-description {
+  padding-bottom: 3rem;
+}
+.project-detail .project-description p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: justify;
+}
+.project-detail .project-info div:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+.project-detail .project-info h3 {
+  display: inline-block;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f5f5f5;
+}
+.project-detail .project-info p,
+.project-detail .project-info a {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.project-detail .project-info a {
+  display: block;
+}
+.project-detail .project-info ul li {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.project-detail .project-info .mainFunction li,
+.project-detail .project-info .keyConcept li {
+  position: relative;
+  padding-left: 0.6rem;
+  padding-bottom: 0.4rem;
+  line-height: 1.5;
+}
+.project-detail .project-info .mainFunction li::before,
+.project-detail .project-info .keyConcept li::before {
+  position: absolute;
+  left: 0;
+  content: "-";
+}
+
 .accordion-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,7 +205,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 3em;
-  padding: 0 1.4rem;
+  padding: 0 2rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -166,7 +223,7 @@ img {
 
 .home {
   height: 100vh;
-  padding: 7.5rem 1.4rem 0;
+  padding: 7.5rem 2rem 0;
   text-transform: uppercase;
 }
 .home header {
@@ -191,7 +248,7 @@ img {
 
 .about {
   height: 100%;
-  padding: 3.2rem 1.4rem 5rem;
+  padding: 3.2rem 2rem 5rem;
 }
 .about header {
   padding-bottom: 1.2rem;
@@ -219,4 +276,39 @@ img {
 }
 .about .skill {
   margin-bottom: 2rem;
+}
+
+.Projects {
+  height: 100vh;
+  padding: 7.5rem 2rem 0;
+}
+.Projects header {
+  padding-bottom: 2.6rem;
+}
+.Projects header h1 {
+  padding-bottom: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.2em;
+}
+.Projects header p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: justify;
+}
+.Projects .Projects-nav li {
+  font-family: "GrandSlang", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.Projects .Projects-nav li:hover {
+  -webkit-transform: translateX(0.8rem) skewX(-20deg);
+          transform: translateX(0.8rem) skewX(-20deg);
 }

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Accordion from "../components/Accordion";
 
 function About() {
@@ -21,8 +20,8 @@ function About() {
         <Accordion />
       </section>
       <div className="btn-wrap">
-        <Link className="btn">My CV</Link>
-        <Link className="btn" to="https://github.com/hy0ni" target="_blank" rel="noopener noreferrer">GitHub</Link>
+        <a className="btn" href="https://glen-torta-3d5.notion.site/1121554da7758082b922fb25f06dec83" target="_blank" rel="noopener noreferrer">My CV</a>
+        <a className="btn" href="https://github.com/hy0ni" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </main>
   )
