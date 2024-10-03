@@ -1,6 +1,10 @@
 // adstracts
 @import "../scss/abstracts/variables";
 
+//mixin
+@import "../scss/helpers/mixin";
+@import "../scss/helpers/function";
+
 //base
 @import "../scss/base/reset";
 @import "../scss/base/common";

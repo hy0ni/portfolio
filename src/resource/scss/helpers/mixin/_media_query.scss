@@ -1,0 +1,18 @@
+/* @media Breakpoints */
+$breakpoint-mobile: 416px;
+$breakpoint-tablet: 768px;
+
+// PC 우선
+@mixin mobile {
+  //416px
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  //768px
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
