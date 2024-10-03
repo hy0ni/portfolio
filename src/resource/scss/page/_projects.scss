@@ -1,36 +1,83 @@
-.Projects {
-  height: 100vh;
-  padding: calc(7.5rem + $nav-height) $width-padding 0;
+// .Projects {
+//   height: 100vh;
+//   padding: calc(7.5rem + $nav-height) $width-padding 0;
+//   box-sizing: border-box;
+
+//   header {
+//     padding-bottom: 0.4rem;
+//     h1 {
+//       font-size: 0.8rem;
+//       font-weight: 500;
+//       line-height: 1.6;
+//       letter-spacing: 0.2em;
+//     }
+//   }
+//   p {
+//     font-size: 0.8rem;
+//     font-weight: 400;
+//     line-height: 1.8;
+//     text-align: justify;
+//   }
+
+//   .Projects-nav {
+//     padding-top: 3rem;
+
+//     li {
+//       font-family: $title-font;
+//       font-size: 2.2rem;
+//       line-height: 1.5;
+//       cursor: pointer;
+//       transition: transform 0.4s ease;
+
+//       &:hover {
+//         transform: translateX(0.8rem) skewX(-20deg);
+//       }
+//     }
+//   }
+// }
+
+.project {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  padding-left: calc($nav-desktop-width + $padding-desktop);
+  padding-right: $padding-desktop;
   box-sizing: border-box;
 
   header {
-    padding-bottom: 0.4rem;
     h1 {
-      font-size: 0.8rem;
+      padding-bottom: 8px;
+      font-size: clamp(14px, vw(16), 18px);
       font-weight: 500;
       line-height: 1.6;
       letter-spacing: 0.2em;
     }
-  }
-  p {
-    font-size: 0.8rem;
-    font-weight: 400;
-    line-height: 1.8;
-    text-align: justify;
+
+    p {
+      font-size: clamp(14px, vw(16), 16px);
+      font-weight: 400;
+      line-height: 1.8;
+      text-align: justify;
+    }
   }
 
-  .Projects-nav {
-    padding-top: 3rem;
+  .project-nav {
+    padding-top: vw(60);
 
     li {
       font-family: $title-font;
-      font-size: 2.2rem;
-      line-height: 1.5;
+      font-size: clamp(vw(90), vw(100), 140px);
+      font-weight: 400;
       cursor: pointer;
-      transition: transform 0.4s ease;
+      transition: all 0.4s ease;
 
       &:hover {
-        transform: translateX(0.8rem) skewX(-20deg);
+        color: $point;
+        transform: translateX(30px) skewX(-20deg);
       }
     }
   }
