@@ -1,6 +1,7 @@
 /* @media Breakpoints */
 $breakpoint-mobile: 416px;
 $breakpoint-tablet: 1024px;
+$breakpoint-wide-desktop: 1500px;
 
 // PC 우선
 @mixin mobile {
@@ -13,6 +14,13 @@ $breakpoint-tablet: 1024px;
 @mixin tablet {
   //1024px
   @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin wide-desktop {
+  //1500px
+  @media (min-width: #{$breakpoint-wide-desktop}) {
     @content;
   }
 }

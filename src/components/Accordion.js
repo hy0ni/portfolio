@@ -2,10 +2,10 @@ import { useState } from "react";
 
 const AccordionItem = ({ title, content, isOpen, onToggle }) => {
   return (
-    <dl>
+    <dl className="accordion">
       <dt className={`accordion-title ${isOpen ? 'active' : ''}`} onClick={onToggle}>
         {title}
-          <span className={`accordion-icon ${isOpen ? 'rotate' : ''}`} />
+        <span className={`accordion-icon ${isOpen ? 'rotate' : ''}`} />
       </dt>
       <dd className={`accordion-content ${isOpen ? 'expanded' : 'collapsed'}`}>
         {content.map((text, index) => (

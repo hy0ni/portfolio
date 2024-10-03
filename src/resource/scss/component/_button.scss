@@ -1,20 +1,22 @@
 .btn-wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 1rem 0;
+  width: 60%;
+  padding-top: 60px;
 
   .btn {
-    font-size: 0.8rem;
-    margin-right: 1rem;
-    padding: 0.1rem;
+    padding: 6px;
+    margin-right: 20px;
+    font-size: 14px;
     color: $primary;
-    font-weight: 400;
+    font-weight: 500;
     border-bottom: 1px solid $primary;
     letter-spacing: 0.1em;
+    transition: all 0.3s ease;
 
     &:hover {
-      font-weight: 500;
+      color: $point;
+      border-bottom: 1px solid $point;
     }
   }
 }

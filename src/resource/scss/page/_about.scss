@@ -1,38 +1,57 @@
 .about {
-  height: 100vh;
-  margin-top: $nav-height;
-  padding: 3.2rem  $width-padding 5rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: calc($nav-desktop-width + $padding-desktop);
+  padding-right: $padding-desktop;
 
   header {
-    padding-bottom: 1.2rem;
-
     h1 {
       font-family: $title-font;
-      font-size: 3.2rem;
+      font-size: clamp(140px, vw(160), 160px);
       font-weight: 400;
     }
   }
 
   .intro {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: vw(50);
     &-img {
       display: block;
-      align-self: end;
       width: 100%;
-      height: 180px;
+      height: 340px;
       background: url("../img/about_img.png") no-repeat;
       background-size: contain;
       background-position: center;
+
+      @include wide-desktop {
+        position: relative;
+        height: 360px;
+        left: vw(-80);
+      }
     }
 
     p {
-      padding: 2rem 0;
-      font-size: 0.9rem;
+      width: 100%;
+      padding-top: clamp(50px, vw(80), 80px);
+      padding-right: vw(40);
+      font-family: $title-font;
+      font-size: clamp(16px, vw(18), 18px);
+      font-weight: 400;
       line-height: 1.6;
       text-align: justify;
     }
   }
 
   .skill {
-    margin-bottom: 2rem;
+    h2 {
+      padding-bottom: 20px;
+      font-family: $title-font;
+      font-size: clamp(28px, vw(30), 30px);
+      font-weight: 400;
+    }
   }
 }

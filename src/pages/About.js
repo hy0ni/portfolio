@@ -19,12 +19,13 @@ function About() {
           </p>
         </section>
         <section className="skill">
+          <h2>Skills</h2>
           <Accordion />
+          <div className="btn-wrap">
+            <a className="btn" href="https://glen-torta-3d5.notion.site/1121554da7758082b922fb25f06dec83" target="_blank" rel="noopener noreferrer">My CV</a>
+            <a className="btn" href="https://github.com/hy0ni" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </section>
-        <div className="btn-wrap">
-          <a className="btn" href="https://glen-torta-3d5.notion.site/1121554da7758082b922fb25f06dec83" target="_blank" rel="noopener noreferrer">My CV</a>
-          <a className="btn" href="https://github.com/hy0ni" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
       </Animation>
     </main>
   )
