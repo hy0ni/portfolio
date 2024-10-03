@@ -8,29 +8,28 @@
   justify-content: space-between;
   width: $nav-desktop-width;
   height: 100vh;
-  padding: 20px 0;
+  padding: 10px 0;
   box-sizing: border-box;
   z-index: $zGnb;
-
-  border: 1px solid rgb(0, 255, 128);
 
   ul {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
-    gap: 60px;
+    gap: 80px;
 
     li {
       font-size: 12px;
       font-weight: 400;
-      letter-spacing: 0.2em;
-      transform: rotate(-90deg) translateX(-100%);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      transform: rotate(-90deg) translateX(-80%);
     }
   }
   .copyright {
     font-size: 12px;
     font-weight: 400;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     transform: rotate(-90deg) translateX(100%);
   }
 }
