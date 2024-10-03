@@ -14,3 +14,33 @@
     font-weight: 600;
   }
 }
+
+.mobile-hidden-br {
+  display: none;
+}
+
+:root {
+  --vw: 360;
+}
+
+@include tablet {
+  :root {
+    --vw: 1000;
+  }
+
+  .mobile-hidden-br {
+    display: block;
+  }
+}
+
+@include notebook {
+  :root {
+    --vw: 1600;
+  }
+}
+
+@include wide-desktop {
+  :root {
+    --vw: 1920;
+  }
+}

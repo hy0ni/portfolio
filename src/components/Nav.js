@@ -7,19 +7,19 @@ function Nav() {
   const navClass = location.pathname.startsWith('/project') ? 'bg-black' : 'bg-default';
 
   return (
-    <nav >
-      <ul className={`global-nav ${navClass}`}>
+    <nav className={`global-nav ${navClass}`}>
+      <ul>
         {location.pathname === '/' ? (
           <li>Portfolio</li>
         ) : (
           <>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/project">Projects</NavLink></li>
+            <li><NavLink to="/">HOME</NavLink></li>
+            <li><NavLink to="/about">ABOUT</NavLink></li>
+            <li><NavLink to="/project">PROJECTS</NavLink></li>
           </>
         )}
-        <li className="copyright">©2024</li>
       </ul>
+      <span className="copyright">©2024</span>
     </nav>
   )
 }

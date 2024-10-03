@@ -1,5 +1,9 @@
-$nav-height: 3em;
-$width-padding: 2rem !default;
+$nav-height-mobile: clamp(50px, vw(50), 50px);
+$nav-width: 80px; // tablet width
+
+$padding-mobile: vw(30) !default;
+$padding-tablet: vw(90);
+$padding-notebook: vw(180);
 
 //color
 $primary: #1c1d20 !default;

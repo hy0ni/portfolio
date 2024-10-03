@@ -3,8 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
+    padding: 1rem;
+    font-size: clamp(14px, vw(13), 16px);
     font-weight: 500;
     border-bottom: 1px solid $border;
     transition: all 0.5s ease;
@@ -27,9 +27,6 @@
 
     &:not(.active):hover {
       background-color: transparent;
-      @media (min-width: 416px) {
-        background-color: $active-bg;
-      }
     }
   }
 
@@ -37,7 +34,7 @@
     overflow: hidden;
     padding: 0 1rem;
     max-height: 0;
-    font-size: 0.9rem;
+    font-size: clamp(13px, vw(12), 14px);
     font-weight: 400;
     line-height: 1.8;
     background: #f2f2f2;
@@ -51,6 +48,16 @@
 
     p {
       padding-bottom: 0.2rem;
+    }
+  }
+}
+
+@include tablet {
+  .accordion {
+    &-title {
+      &:not(.active):hover {
+        background-color: $active-bg;
+      }
     }
   }
 }

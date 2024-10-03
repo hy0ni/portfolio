@@ -1,14 +1,14 @@
 .about {
-  height: 100vh;
-  margin-top: $nav-height;
-  padding: 3.2rem  $width-padding 5rem;
+  height: 100%;
+  margin-top: $nav-height-mobile;
+  padding: vw(46) $padding-mobile;
 
   header {
     padding-bottom: 1.2rem;
 
     h1 {
       font-family: $title-font;
-      font-size: 3.2rem;
+      font-size: clamp(54px, vw(48), 68px);
       font-weight: 400;
     }
   }
@@ -18,21 +18,60 @@
       display: block;
       align-self: end;
       width: 100%;
-      height: 180px;
+      height: clamp(180px, vw(160), 280px);
       background: url("../img/about_img.png") no-repeat;
       background-size: contain;
       background-position: center;
     }
 
     p {
-      padding: 2rem 0;
-      font-size: 0.9rem;
+      padding: vw(20) 0;
+      font-size: clamp(13px, vw(12), 14px);
       line-height: 1.6;
       text-align: justify;
     }
   }
 
   .skill {
-    margin-bottom: 2rem;
+    margin-bottom: vw(20);
+  }
+}
+
+@include tablet {
+  .about {
+    overflow: hidden;
+    height: calc(100vh - 140px);
+    margin-top: 0;
+    margin-left: $nav-width;
+    padding: 80px $padding-tablet 60px;
+
+    header {
+      padding-bottom: 0;
+      h1 {
+        font-size: 80px;
+        font-weight: 400;
+      }
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: row-reverse;
+      height: 250px;
+      padding-bottom: vw(40);
+      &-img {
+        position: relative;
+        right: 30px;
+        height: 230px;
+      }
+
+      p {
+        width: 100%;
+        padding-top: vw(30);
+        font-size: clamp(14px, vw(14), 15px);
+      }
+    }
+    .skill {
+      margin-bottom: 0;
+    }
   }
 }

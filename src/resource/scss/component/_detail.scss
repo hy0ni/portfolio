@@ -1,21 +1,22 @@
 .project-detail {
-  padding: $nav-height $width-padding 5rem;
+  padding: $nav-height-mobile $padding-mobile;
+
   header {
     margin: 2rem 0;
-    padding: 7.5rem 0;
+    padding: vw(100) 0;
     border: 1px solid #676767;
     h1 {
       text-align: center;
       font-family: $title-font;
-      font-size: 2.2rem;
+      font-size: vw(30);
     }
   }
 
   .project-description {
     padding-bottom: 3rem;
 
-    p {
-      font-size: 0.9rem;
+    & > p {
+      font-size: clamp(13px, vw(12), 16px);
       font-weight: 400;
       line-height: 1.6;
       text-align: justify;
@@ -31,28 +32,23 @@
 
     h3 {
       display: inline-block;
-      padding-bottom: 0.1rem;
-      margin-bottom: 0.8rem;
-      font-size: 0.9rem;
+      padding-bottom: vw(1);
+      margin-bottom: clamp(6px, vw(8), 10px);
+      font-size: clamp(13px, vw(12), 16px);
       font-weight: 500;
       text-transform: uppercase;
       border-bottom: 1px solid $secondary;
     }
 
     p,
-    a {
-      font-size: 0.9rem;
+    a,
+    li {
+      font-size: clamp(13px, vw(12), 16px);
       font-weight: 400;
+      line-height: 1.6;
     }
     a {
       display: block;
-    }
-
-    ul {
-      li {
-        font-size: 0.9rem;
-        font-weight: 400;
-      }
     }
 
     .mainFunction,
@@ -67,6 +63,102 @@
           left: 0;
           content: "-";
         }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .project-detail {
+    margin-left: $nav-width;
+    padding: vw(100) $padding-tablet;
+    box-sizing: border-box;
+
+    header {
+      margin: 0;
+      padding: vw(140) 0;
+
+      h1 {
+        font-size: vw(60);
+      }
+    }
+    .project-description {
+      padding: vw(30) 0 vw(80);
+
+      & > p {
+        font-size: clamp(15px, vw(20), 16px);
+      }
+    }
+
+    .project-info {
+      h3 {
+        margin-bottom: vw(10);
+        font-size: clamp(15px, vw(20), 16px);
+      }
+
+      p,
+      a,
+      li {
+        font-size: clamp(15px, vw(20), 16px);
+        line-height: 1.8;
+      }
+
+      .stack {
+        ul {
+          display: flex;
+          align-items: center;
+
+          li:not(:last-of-type) {
+            padding-right: vw(10);
+          }
+        }
+      }
+      .mainFunction,
+      .keyConcept {
+        li {
+          padding-left: 0.8rem;
+          padding-bottom: 0.6rem;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
+
+@include notebook {
+  .project-detail {
+    margin-left: $nav-width;
+    padding: vw(120) $padding-notebook;
+    box-sizing: border-box;
+
+    header {
+      margin: 0;
+      padding: vw(200) 0;
+
+      h1 {
+        font-size: vw(100);
+      }
+    }
+    .project-description {
+      padding: vw(60) 0 vw(100);
+      & > p {
+        font-size: vw(20);
+      }
+    }
+
+    .project-info {
+      div {
+        &:not(:last-of-type) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .pc-info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      &:not(:last-of-type) {
+        padding-bottom: vw(140);
       }
     }
   }
