@@ -1,29 +1,46 @@
 .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 100vh;
-  padding: 7.5rem $width-padding 0;
-  text-transform: uppercase;
-  box-sizing: border-box;
+  padding-left: $nav-desktop-width;
+
+  .flex-wrap {
+    display: flex;
+    align-items: center;
+  }
 
   header {
-    padding-bottom: 3rem;
+    align-self: flex-end;
+    padding-right: vw(60);
+    padding-bottom: vw(60);
+
     h1,
-    h2,
-    p {
-      font-size: 1rem;
+    h2 {
+      font-size: 15px;
       font-weight: 500;
-      line-height: 1.6;
+      line-height: 1.4;
     }
+
     p {
+      padding-top: vw(10);
+      font-size: 14px;
       font-weight: 400;
     }
   }
 
   .local-nav {
-    a {
+    li {
       font-family: $title-font;
-      font-size: 3.2rem;
-      font-weight: 400;
-      line-height: 1.4;
+      font-size: clamp(160px, vw(220), 240px);
+      transition: all 0.3s ease;
+      font-style: italic;
+      color: $point;
+
+      &:hover {
+        transform: translateX(50px) skewX(-20deg);
+      }
     }
   }
 }
