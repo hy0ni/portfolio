@@ -3,26 +3,27 @@
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: $nav-height;
-  padding: 0 $width-padding;
+  width: $nav-desktop;
+  height: 100vh;
   box-sizing: border-box;
-  transition: font-weight 0.4s ease;
-  z-index: 100;
+  z-index: $zGnb;
 
-  li {
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
+  border: 1px solid rgb(0, 255, 128);
 
-    &:not(:last-child) {
-      margin-right: 0.5rem;
+  ul {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 60px;
+
+    li {
+      transform: rotate(-90deg) translateX(-100%);
     }
   }
-
   .copyright {
-    margin-left: auto;
+    transform: rotate(-90deg) translateX(100%);
   }
 }
