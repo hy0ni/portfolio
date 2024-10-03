@@ -1,5 +1,5 @@
 .bg-default {
-  background-color: $secondary;
+  background: url("../img/default_bg.png") no-repeat;
   color: $primary;
   a.active {
     font-weight: 600;
@@ -7,7 +7,7 @@
 }
 
 .bg-black {
-  background-color: $primary;
+  background: url("../img/black_bg.png") no-repeat;
   color: $secondary;
 
   a.active {
@@ -32,7 +32,7 @@
 }
 
 :root {
-  --vw: 1024;
+  --vw: 1500;
 }
 
 @include tablet {
