@@ -21,6 +21,7 @@
       font-size: 15px;
       font-weight: 500;
       line-height: 1.4;
+      color: #535353;
     }
 
     p {
@@ -40,6 +41,62 @@
 
       &:hover {
         transform: translateX(50px) skewX(-20deg);
+      }
+    }
+  }
+}
+
+@include notebook {
+  .home {
+    .flex-wrap {
+      flex-direction: column;
+    }
+
+    header {
+      align-self: flex-start;
+      padding-right: 0;
+      padding-bottom: 80px;
+    }
+
+    .local-nav {
+      li {
+        font-size: vw(180);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .home {
+    padding-left: 0;
+
+    header {
+      padding-bottom: 60px;
+    }
+
+    .local-nav {
+      li {
+        font-size: vw(160);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .home {
+    display: block;
+    padding: 25vh $padding-mobile;
+    .flex-wrap {
+      display: block;
+    }
+
+    header {
+      padding-bottom: 40px;
+    }
+
+    .local-nav {
+      li {
+        font-size: vw(80);
       }
     }
   }

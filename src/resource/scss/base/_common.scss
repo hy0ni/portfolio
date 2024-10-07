@@ -37,6 +37,12 @@
   --vw: 1500;
 }
 
+@include notebook {
+  :root {
+    --vw: 1024;
+  }
+}
+
 @include tablet {
   :root {
     --vw: 768;

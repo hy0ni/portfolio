@@ -9,6 +9,7 @@
   width: $nav-desktop-width;
   height: 100vh;
   padding: 10px 0;
+  border-right: 1px solid $border;
   box-sizing: border-box;
   z-index: $zGnb;
 
@@ -31,5 +32,45 @@
     font-weight: 400;
     letter-spacing: 0.3em;
     transform: rotate(-90deg) translateX(100%);
+  }
+}
+
+@include tablet {
+  .global-nav {
+    flex-direction: initial;
+    width: 100%;
+    height: $nav-mobile-height;
+    padding: 0 $padding-mobile;
+    border-right: 0;
+    border-bottom: 1px solid $border;
+
+    ul {
+      display: flex;
+      flex-direction: initial;
+      justify-content: initial;
+      gap: 20px;
+
+      li {
+        transform: none;
+      }
+    }
+    .copyright {
+      transform: none;
+    }
+  }
+}
+
+@include mobile {
+  .global-nav {
+    ul {
+      gap: 10px;
+
+      li {
+        font-size: 10px;
+      }
+    }
+    .copyright {
+      font-size: 10px;
+    }
   }
 }
