@@ -39,3 +39,29 @@
     }
   }
 }
+
+@include notebook {
+  .accordion {
+    width: 100%;
+
+    &-title {
+      font-size: clamp(14px, vw(18), 16px);
+    }
+
+    &-content {
+      font-size: 13px;
+
+      &.expanded {
+        padding: 20px 10px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .accordion {
+    &-title {
+      font-size: vw(16);
+    }
+  }
+}

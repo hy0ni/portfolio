@@ -16,7 +16,7 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 5px;
-    font-size: clamp(14px, vw(14), 16px);
+    font-size: clamp(12px, vw(14), 16px);
     font-weight: 500;
     transition: all 0.2s ease;
 
@@ -27,6 +27,14 @@
       &:hover {
         color: $point;
         border-bottom: 1px solid $point;
+      }
+
+      // 터치 장치 hover 비활성화
+      @media (hover: none) {
+        &:hover {
+          color: $primary;
+          border-bottom: 1px solid $primary;
+        }
       }
     }
 
@@ -39,6 +47,16 @@
         border-radius: 50%;
         border: 0;
         padding: vw(20);
+      }
+
+      // 터치 장치 hover 비활성화
+      @media (hover: none) {
+        &:hover {
+          background-color: unset;
+          border-radius: unset;
+          padding: 5px;
+          border-bottom: 1px solid $secondary;
+        }
       }
     }
 

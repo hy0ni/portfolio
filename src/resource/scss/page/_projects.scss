@@ -1,43 +1,5 @@
-// .Projects {
-//   height: 100vh;
-//   padding: calc(7.5rem + $nav-height) $width-padding 0;
-//   box-sizing: border-box;
-
-//   header {
-//     padding-bottom: 0.4rem;
-//     h1 {
-//       font-size: 0.8rem;
-//       font-weight: 500;
-//       line-height: 1.6;
-//       letter-spacing: 0.2em;
-//     }
-//   }
-//   p {
-//     font-size: 0.8rem;
-//     font-weight: 400;
-//     line-height: 1.8;
-//     text-align: justify;
-//   }
-
-//   .Projects-nav {
-//     padding-top: 3rem;
-
-//     li {
-//       font-family: $title-font;
-//       font-size: 2.2rem;
-//       line-height: 1.5;
-//       cursor: pointer;
-//       transition: transform 0.4s ease;
-
-//       &:hover {
-//         transform: translateX(0.8rem) skewX(-20deg);
-//       }
-//     }
-//   }
-// }
-
 .project {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -46,7 +8,6 @@
   padding-bottom: 160px;
   padding-left: calc($nav-desktop-width + $padding-desktop);
   padding-right: $padding-desktop;
-  box-sizing: border-box;
 
   header {
     h1 {
@@ -78,6 +39,61 @@
       &:hover {
         color: $point;
         transform: translateX(30px) skewX(-20deg);
+      }
+    }
+  }
+}
+
+@include notebook {
+  .project {
+    padding-left: calc($nav-desktop-width + $padding-notebook);
+    padding-right: $padding-notebook;
+
+    header {
+      h1 {
+        padding-bottom: 8px;
+        font-size: 13px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .project-nav {
+      li {
+        font-size: vw(80);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .project {
+    padding-top: calc(160px + $nav-mobile-height);
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+
+    header {
+      h1 {
+        font-size: 12px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .project {
+    padding-top: calc(100px + $nav-mobile-height);
+
+    .project-nav {
+      li {
+        font-size: vw(42);
+        line-height: 1.5;
       }
     }
   }

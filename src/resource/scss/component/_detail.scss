@@ -1,10 +1,9 @@
-$padding-content: vw(200) !default;
+$padding-content: vw(120) !default;
 
 .project-detail {
   width: 100%;
   height: 100%;
   padding-left: $nav-desktop-width;
-  box-sizing: border-box;
 
   @include wide-desktop {
     padding-right: $nav-desktop-width;
@@ -32,7 +31,7 @@ $padding-content: vw(200) !default;
   padding: vw(150) $padding-content 0;
 
   @include wide-desktop {
-    padding: vw(150) vw(300) 0;
+    padding: vw(150) vw(200) 0;
   }
 
   p {
@@ -47,7 +46,7 @@ $padding-content: vw(200) !default;
   padding: vw(150) $padding-content;
 
   @include wide-desktop {
-    padding: vw(150) vw(300);
+    padding: vw(150) vw(200);
   }
 
   h3 {
@@ -107,6 +106,121 @@ $padding-content: vw(200) !default;
         left: 0;
         content: "-";
       }
+    }
+  }
+}
+
+@include notebook {
+  .project-detail {
+    padding-right: $nav-desktop-width;
+
+    header {
+      h1 {
+        font-size: vw(100);
+      }
+    }
+  }
+
+  .project-description {
+    padding: vw(130) $padding-content 0;
+
+    p {
+      font-size: vw(25);
+    }
+  }
+
+  .project-info {
+    padding: vw(100) $padding-content;
+
+    h3 {
+      font-size: 15px;
+    }
+
+    p,
+    a,
+    li {
+      font-size: 15px;
+    }
+    article {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: normal;
+      gap: vw(30);
+      padding-bottom: vw(100);
+    }
+  }
+}
+
+@include tablet {
+  .project-detail {
+    padding-top: $nav-mobile-height;
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+
+    header {
+      height: calc(100vh - $nav-mobile-height);
+      h1 {
+        font-size: vw(80);
+      }
+    }
+  }
+
+  .project-description {
+    padding: vw(100) 0;
+
+    p {
+      font-size: vw(26);
+    }
+  }
+
+  .project-info {
+    padding: 0 0 vw(100);
+  }
+}
+
+@include mobile {
+  .project-detail {
+    padding-top: $nav-mobile-height;
+    padding-left: 0;
+    padding-right: 0;
+
+    header {
+      height: calc(50vh - $nav-mobile-height);
+      h1 {
+        font-size: vw(50);
+      }
+    }
+  }
+
+  .project-description {
+    padding: vw(50) $padding-mobile;
+
+    p {
+      font-size: vw(16);
+    }
+  }
+
+  .project-info {
+    padding: 0 $padding-mobile vw(60);
+
+    h3 {
+      font-size: 12px;
+    }
+
+    p,
+    a,
+    li {
+      font-size: 12px;
+    }
+
+    article {
+      gap: vw(20);
+      padding-bottom: vw(60);
+    }
+
+    .mainFunction,
+    .keyConcept {
+      padding-bottom: vw(60);
     }
   }
 }

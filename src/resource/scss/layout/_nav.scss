@@ -9,8 +9,7 @@
   width: $nav-desktop-width;
   height: 100vh;
   padding: 10px 0;
-  border-right: 1px solid $border;
-  box-sizing: border-box;
+  // border-right: 1px solid $border;
   z-index: $zGnb;
 
   ul {
@@ -20,15 +19,15 @@
     gap: 80px;
 
     li {
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 400;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       transform: rotate(-90deg) translateX(-80%);
     }
   }
   .copyright {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     letter-spacing: 0.3em;
     transform: rotate(-90deg) translateX(100%);
@@ -42,7 +41,7 @@
     height: $nav-mobile-height;
     padding: 0 $padding-mobile;
     border-right: 0;
-    border-bottom: 1px solid $border;
+    // border-bottom: 1px solid $border;
 
     ul {
       display: flex;
@@ -64,13 +63,6 @@
   .global-nav {
     ul {
       gap: 10px;
-
-      li {
-        font-size: 10px;
-      }
-    }
-    .copyright {
-      font-size: 10px;
     }
   }
 }
