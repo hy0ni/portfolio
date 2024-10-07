@@ -16,32 +16,38 @@ function ProjectsDetail() {
         <header>
           <h1>{project.title}</h1>
         </header>
+
+        {/* project-description */}
         <section className="project-description">
           <p>{project.description}</p>
         </section>
+
+        {/* project-info */}
         <section className="project-info">
+          <article>
+            <div className="role">
+              <h3>role</h3>
+              <p>{project.role}</p>
+            </div>
 
-          <div className="role">
-            <h3>role</h3>
-            <p>{project.role}</p>
-          </div>
+            <div className="link">
+              <h3>url</h3>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.link}
+              </a>
+            </div>
 
-          <div className="link">
-            <h3>website</h3>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              {project.link}
-            </a>
-          </div>
+            <div className="stack">
+              <h3>stack</h3>
+              <ul>
+                {project.stack.map((stack, index) => (
+                  <li key={index}>{stack}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
 
-          <div className="stack">
-            <h3>stack</h3>
-            <ul>
-              {project.stack.map((stack, index) => (
-                <li key={index}>{stack}</li>
-              ))}
-            </ul>
-          </div>
-
+          {/* mainFunction */}
           <div className="mainFunction">
             <h3>mainFunction</h3>
             <ul>
@@ -51,6 +57,7 @@ function ProjectsDetail() {
             </ul>
           </div>
 
+          {/* keyConcept */}
           <div className="keyConcept">
             <h3>keyConcept</h3>
             {Array.isArray(project.keyConcept) && project.keyConcept.length > 0 ? (
@@ -62,6 +69,10 @@ function ProjectsDetail() {
             ) : (
               <p>Key Concepts이 없습니다.</p>
             )}
+          </div>
+
+          <div className="btn-wrap">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Check it out.</a>
           </div>
         </section>
       </Animation>

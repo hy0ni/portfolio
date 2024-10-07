@@ -1,22 +1,53 @@
 .btn-wrap {
+  position: relative;
   display: flex;
   align-items: center;
-  width: 60%;
-  padding-top: 60px;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  padding: vw(30);
+
+  &.left {
+    justify-content: flex-start;
+  }
 
   .btn {
-    padding: 6px;
-    margin-right: 20px;
-    font-size: 14px;
-    color: $primary;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    font-size: clamp(14px, vw(14), 16px);
     font-weight: 500;
-    border-bottom: 1px solid $primary;
-    letter-spacing: 0.1em;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 
-    &:hover {
-      color: $point;
-      border-bottom: 1px solid $point;
+    &.btn-primary {
+      color: $primary;
+      border-bottom: 1px solid $primary;
+
+      &:hover {
+        color: $point;
+        border-bottom: 1px solid $point;
+      }
+    }
+
+    &.btn-secondary {
+      color: $secondary;
+      border-bottom: 1px solid $secondary;
+
+      &:hover {
+        background-color: $point;
+        border-radius: 50%;
+        border: 0;
+        padding: vw(20);
+      }
+    }
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      left: 80px;
     }
   }
 }

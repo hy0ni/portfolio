@@ -4,7 +4,7 @@ const projectList = [
     title: "RPS Game App",
     description: "해당 웹 애플리케이션은 사용자와 컴퓨터 간의 가위바위보 게임을 제공하며, 백엔드 API를 통해 사용자 인증과 게임 전적 관리를 지원합니다. 사용자들은 회원가입, 로그인, 자신의 게임 전적을 확인하고 관리할 수 있습니다.",
     role: "Front-end [개인 프로젝트]",
-    link: "https://hy0ni.github.io/rsp-game-app/",
+    link: "https://hy0ni.github.io/rsp-game-app",
     stack: ["React", "HTML", "CSS"],
     mainFunction: [
       "사용자 리스트와 전적 이동 버튼 제공",
@@ -48,7 +48,7 @@ const projectList = [
     title: "SKT ifland",
     description: "SKT ifland는 가상 모임을 중심으로 소셜 기능에 최적화 한 국내 대표 '소통형 메타버스' 서비스 웹 페이지이며 전반적인 페이지 개편, 유지보수, 신규 페이지, 어드민 등 메인 퍼블리셔로 작업하였습니다.",
     role: "Web publishing",
-    link: "https://ifland.io/",
+    link: "https://ifland.io",
     stack: ["HTML", "CSS", "SCSS", "반응형 UI", "웹 접근성 가이드라인"],
     mainFunction: [
       "디자이너 및 기획자와 소통하여 디자인 가이드에 맞춘 퍼블리싱 작업 진행",
