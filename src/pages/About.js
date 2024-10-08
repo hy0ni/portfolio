@@ -4,7 +4,8 @@ import Animation from "../components/Animation";
 function About() {
   return (
     <main className="about bg-default">
-      <Animation delayBetween={200} initialDelay={200} duration={1000}>
+      <Animation delayBetween={500} initialDelay={200} duration={1000}>
+        <span className="bg-slide bg-black"></span>
         <header>
           <h1>About</h1>
         </header>

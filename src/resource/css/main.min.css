@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* @media Breakpoints */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
@@ -14,11 +13,16 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  -webkit-overflow-scrolling: touch;
 }
 
 ul {
@@ -41,6 +45,16 @@ button {
 img {
   display: block;
   max-width: 100%;
+}
+
+.bg-slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
 }
 
 .bg-default {
@@ -99,8 +113,8 @@ img {
   }
 }
 .project-detail {
+  position: absolute;
   width: 100%;
-  height: 100%;
   padding-left: 80px;
 }
 @media (min-width: 1500px) {
@@ -119,7 +133,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  padding-bottom: 16vh;
+  padding-bottom: 26vh;
   background-color: #e8ddd1;
   color: #1c1d20;
 }
@@ -283,7 +297,8 @@ img {
     padding-right: 0;
   }
   .project-detail header {
-    height: calc(50vh - 60px);
+    height: calc(40vh + 60px);
+    padding-bottom: 15vh;
   }
   .project-detail header h1 {
     font-size: calc(50 * 100 / var(--vw) * 1vw);
@@ -447,12 +462,10 @@ img {
   opacity: 0;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  -webkit-transition: opacity, -webkit-transform ease-out;
+  transition: opacity, -webkit-transform ease-out;
+  transition: opacity, transform ease-out;
+  transition: opacity, transform ease-out, -webkit-transform ease-out;
 }
 
 .fade-in-active {
@@ -461,49 +474,20 @@ img {
           transform: translateY(0);
 }
 
-.slideDown {
-  -webkit-transform: translateY(-100vh);
-          transform: translateY(-100vh); /* 처음에는 화면 위에 숨겨진 상태 */
-  -webkit-transition: -webkit-transform 1s ease-out;
-  transition: -webkit-transform 1s ease-out;
-  transition: transform 1s ease-out;
-  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
-}
-
-.slideDown-active {
+.slide-up {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: -webkit-transform 1s ease-out forwards;
-  transition: -webkit-transform 1s ease-out forwards;
-  transition: transform 1s ease-out forwards;
-  transition: transform 1s ease-out forwards, -webkit-transform 1s ease-out forwards; /* 애니메이션 실행 */
+  -webkit-transition: -webkit-transform ease-out;
+  transition: -webkit-transform ease-out;
+  transition: transform ease-out;
+  transition: transform ease-out, -webkit-transform ease-out;
 }
 
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+.slide-up-active {
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
 .global-nav {
   position: fixed;
   top: 0;

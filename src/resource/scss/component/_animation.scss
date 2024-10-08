@@ -1,8 +1,7 @@
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition-property: opacity, transform;
-  transition-timing-function: ease;
+  transition: opacity, transform ease-out;
 }
 
 .fade-in-active {
@@ -10,13 +9,11 @@
   transform: translateY(0);
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.slide-up {
+  transform: translateY(0);
+  transition: transform ease-out;
+}
+
+.slide-up-active {
+  transform: translateY(-100vh);
 }

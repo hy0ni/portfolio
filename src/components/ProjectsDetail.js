@@ -12,11 +12,11 @@ function ProjectsDetail() {
 
   return (
     <div className="project-detail bg-black">
-      <Animation delayBetween={200} initialDelay={200} duration={1000}>
+      <Animation delayBetween={600} initialDelay={200} duration={1000}>
+        <span className="bg-slide bg-default"></span>
         <header>
           <h1>{project.title}</h1>
         </header>
-
         {/* project-description */}
         <section className="project-description">
           <p>{project.description}</p>
@@ -67,7 +67,7 @@ function ProjectsDetail() {
                 ))}
               </ul>
             ) : (
-              <p>Key Concepts이 없습니다.</p>
+              <p>There is no keyConcept</p>
             )}
           </div>
 

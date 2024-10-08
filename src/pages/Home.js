@@ -4,21 +4,20 @@ import Animation from "../components/Animation";
 function Home() {
   return (
     <main className="home bg-default">
-      <div className="flex-wrap">
-        <header>
-          <Animation delayBetween={200} initialDelay={200} duration={1000}>
+      <Animation delayBetween={600} initialDelay={200} duration={800}>
+        <span className="bg-slide bg-black"></span>
+        <div className="flex-wrap">
+          <header>
             <h1>JANG JIHYUN</h1>
             <h2>Portfolio</h2>
             <p>Front-end Developer</p>
-          </Animation>
-        </header>
-        <ul className="local-nav">
-          <Animation delayBetween={200} initialDelay={600} duration={800}>
+          </header>
+          <ul className="local-nav">
             <li><Link to="/about" >About</Link></li>
             <li><Link to="/project" >Projects</Link></li>
-          </Animation>
-        </ul>
-      </div>
+          </ul>
+        </div>
+      </Animation>
     </main>
   )
 }

@@ -1,8 +1,8 @@
 $padding-content: vw(120) !default;
 
 .project-detail {
+  position: absolute;
   width: 100%;
-  height: 100%;
   padding-left: $nav-desktop-width;
 
   @include wide-desktop {
@@ -14,7 +14,7 @@ $padding-content: vw(120) !default;
     align-items: flex-end;
     justify-content: center;
     height: 100vh;
-    padding-bottom: 16vh;
+    padding-bottom: 26vh;
     background-color: $secondary;
     color: $primary;
 
@@ -62,6 +62,7 @@ $padding-content: vw(120) !default;
   li {
     font-size: clamp(13px, vw(20), 16px);
   }
+
   article {
     display: flex;
     align-items: center;
@@ -71,6 +72,7 @@ $padding-content: vw(120) !default;
     h3 {
       margin-bottom: vw(10);
     }
+
     a {
       display: block;
     }
@@ -141,6 +143,7 @@ $padding-content: vw(120) !default;
     li {
       font-size: 15px;
     }
+
     article {
       flex-direction: column;
       align-items: flex-start;
@@ -159,6 +162,7 @@ $padding-content: vw(120) !default;
 
     header {
       height: calc(100vh - $nav-mobile-height);
+
       h1 {
         font-size: vw(80);
       }
@@ -185,7 +189,9 @@ $padding-content: vw(120) !default;
     padding-right: 0;
 
     header {
-      height: calc(50vh - $nav-mobile-height);
+      height: calc(40vh + $nav-mobile-height);
+      padding-bottom: 15vh;
+
       h1 {
         font-size: vw(50);
       }

@@ -9,8 +9,7 @@
   width: $nav-desktop-width;
   height: 100vh;
   padding: 10px 0;
-  // border-right: 1px solid $border;
-  z-index: $zGnb;
+  z-index: $z-gnb;
 
   ul {
     display: flex;
@@ -26,6 +25,7 @@
       transform: rotate(-90deg) translateX(-80%);
     }
   }
+
   .copyright {
     font-size: 10px;
     font-weight: 400;
@@ -41,7 +41,6 @@
     height: $nav-mobile-height;
     padding: 0 $padding-mobile;
     border-right: 0;
-    // border-bottom: 1px solid $border;
 
     ul {
       display: flex;
@@ -53,6 +52,7 @@
         transform: none;
       }
     }
+
     .copyright {
       transform: none;
     }

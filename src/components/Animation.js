@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Children } from "react"; // React.Children를 사용하기 위해 import
+import { Children, cloneElement } from "react"; // React.Children를 사용하기 위해 import
 
 function Animation({ delayBetween = 200, initialDelay = 0, duration = 500, children }) {
   const [visibleIndex, setVisibleIndex] = useState(-1);
@@ -17,16 +17,15 @@ function Animation({ delayBetween = 200, initialDelay = 0, duration = 500, child
   }, [children, delayBetween, initialDelay]);
 
   return (
-    <div>
-      {Children.map(children, (child, index) => (
-        <div
-          key={index}
-          className={`fade-in ${index <= visibleIndex ? 'fade-in-active' : ''}`}
-          style={{ transitionDuration: `${duration}ms` }}
-        >
-          {child}
-        </div>
-      ))}
+    <div className="animation-container">
+      {Children.map(children, (child, index) => {
+        const animationClass = index === 0 ? 'slide-up' : 'fade-in';
+        return cloneElement(child, {
+          key: index,
+          className: `${child.props.className || ''} ${animationClass} ${index <= visibleIndex ? `${animationClass}-active` : ''}`,
+          style: { transitionDuration: `${duration}ms`, ...child.props.style },
+        });
+      })}
     </div>
   );
 }
